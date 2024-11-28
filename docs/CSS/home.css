@@ -1,0 +1,118 @@
+/* Ensure the body takes full height */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Fixed header styles */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure the header stays above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background: #fff;
+    color: #333;
+    border-radius: 5px;
+  }
+
+  nav ul li a.active {
+    background-color: #007bff; /* Highlight color */
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  
+  /* Adjust the main content so it doesn't get hidden behind the fixed header */
+  main {
+    padding-top: 80px; /* Add space for the fixed header */
+    flex-grow: 1;
+  }
+  
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Push the footer to the bottom */
+  }
+  
+  .home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .projects-section {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .projects-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .project-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .project-gallery img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .project-gallery img:hover {
+    transform: scale(1.1);
+  }
+  
